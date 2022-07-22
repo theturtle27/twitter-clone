@@ -16,6 +16,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/" element={check() ? <MainPage /> : <Home />} />
+          <Route path="/home" element={<Home />} />
         </Routes>
       </Router>
     </React.Fragment>

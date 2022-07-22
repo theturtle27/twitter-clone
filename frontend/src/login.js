@@ -1,7 +1,7 @@
 import Axios from "axios";
 
 async function login(email, pwd) {
-  const res = await Axios.post("http://localhost:5000/api/login", {
+  const res = await Axios.post("/api/login", {
     email,
     pwd,
   });

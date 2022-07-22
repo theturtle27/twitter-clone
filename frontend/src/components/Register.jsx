@@ -8,7 +8,7 @@ class Register extends Component {
   register = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/api/register", {
+      .post("/api/register", {
         email: document.getElementById("email").value,
         username: document.getElementById("username").value,
         pwd: document.getElementById("password").value,
