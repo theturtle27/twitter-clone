@@ -5,6 +5,7 @@ import Login from "./Login";
 import Register from "./Register";
 import MainPage from "./MainPage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { check } from "../login";
 
 function App() {
   return (
@@ -12,10 +13,9 @@ function App() {
       <Navbar />
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/mainpage" element={<MainPage />} />
+          <Route path="/" element={check() ? <MainPage /> : <Home />} />
         </Routes>
       </Router>
     </React.Fragment>
